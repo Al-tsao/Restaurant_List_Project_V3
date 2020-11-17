@@ -105,7 +105,7 @@ app.post('/add', (req, res) => {
 })
 
 // delete requesting
-app.post('/restaurants/:id/delete', (req, res) => {
+app.delete('/restaurants/:id', (req, res) => {
   const id = req.params.id
   Restaurant.findById(id)
     .then(restaurant => restaurant.remove())
@@ -123,7 +123,7 @@ app.get('/restaurants/:id/edit', (req, res) => {
 })
 
 // edit requesting
-app.post('/restaurants/:id/edit', (req, res) => {
+app.put('/restaurants/:id', (req, res) => {
   const id = req.params.id
   Restaurant.findById(id)
     .then(restaurant => {
