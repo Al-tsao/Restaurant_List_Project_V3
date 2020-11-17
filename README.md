@@ -1,4 +1,4 @@
-# 餐廳清單的 CRUD 功能 - Restaurant Menu 2.0
+# 餐廳清單的 CRUD 功能 - Restaurant Menu 3.0
 
 提供使用者新增、刪除及修改餐廳的資訊，例如:餐廳類別、地址、評分、描述...等
 
@@ -9,6 +9,7 @@
 - 使用者可以瀏覽全部所有餐廳
 - 使用者可以修改一家餐廳的資訊
 - 使用者可以刪除一家餐廳  
+- 使用者可以依分類排序餐廳 
 
 ## Environment SetUp - 環境建置
 
@@ -34,13 +35,13 @@
 1. 開啟終端機(Terminal) 或 (Git Bash) 到欲存放專案的本機位置並執行:
 
 ```
-git clone https://github.com/Al-tsao/restaurant_list.git
+git clone https://github.com/Al-tsao/Restaurant_List_Project_V3.git
 ```
 
 2. 開啟終端機(Terminal) 或 (Git Bash)，進入到存放此專案的資料夾
 
 ```
-cd restaurant-list-master
+cd Restaurant_List_Project_V3-master
 ```
 
 3. 安裝 npm 套件
