@@ -2,12 +2,13 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const Restaurant = require('./models/rList')
 // 載入 method-override
 const methodOverride = require('method-override')
 // 引用路由器
 const routes = require('./routes')
+require('./config/mongoose')
 
 // set express to app
 const app = express()
@@ -26,18 +27,18 @@ app.use(methodOverride('_method'))
 app.use(routes)
 
 
-// connect to database
-mongoose.connect('mongodb://localhost/r_list', { useNewUrlParser: true, useUnifiedTopology: true })
-// connection status
-const db = mongoose.connection
-// connect fail
-db.on('error', () => {
-  console.log('mongodb error!')
-})
-// connect succeed
-db.once('open', () => {
-  console.log('mongodb connected!')
-})
+// // connect to database
+// mongoose.connect('mongodb://localhost/r_list', { useNewUrlParser: true, useUnifiedTopology: true })
+// // connection status
+// const db = mongoose.connection
+// // connect fail
+// db.on('error', () => {
+//   console.log('mongodb error!')
+// })
+// // connect succeed
+// db.once('open', () => {
+//   console.log('mongodb connected!')
+// })
 
 
 // ---------------- route setting ------------------
